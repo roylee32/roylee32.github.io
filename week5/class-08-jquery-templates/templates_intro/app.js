@@ -46,3 +46,28 @@ var presidentObject = {
         'Obama',
     ]
 }
+// presidentObject.presidents.forEach(function (president){
+//     $('#jquery-list').append('<option>' + president + '</option>');
+// })
+// //Handlebars Template Append
+// var titleObj = {
+//     title: 'US Presidents',
+//     description: "A JSD Project",
+// }
+
+// //2: get template and compile using Handlebars
+// var titleSource = $('#title-template').html();
+// var titleCompiled = Handlebars.compile(titleSource);
+
+// //3: pass compiled template JS object
+// var titleTemplate = titleCompiled(titleObj);
+
+// //4: append template to the DOM
+// $('#title').append(titleTemplate);
+
+
+var presidentSource = $('#president-template').html();
+var presidentCompiled = Handlebars.compile(presidentSource);
+var presidentTemplate = presidentCompiled(presidentObject);
+$('#handlebars-list').append(presidentTemplate);
+

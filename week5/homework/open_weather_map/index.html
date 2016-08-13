@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<title></title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<h1>Open Weather Maps</h1>
+	<hr>
+
+	<div>
+		<h2>Current Weather in NYC</h2>
+		<div id="nyc-weather"></div>
+	</div>
+	<hr>
+
+	<div id="weather-wanted">
+		<form id="weather-form">
+			<h2>Find Specific Weather</h2>
+			<label for="city">City</label>
+			<input name="city" type="text" id="city" placeholder="city">
+			<label for="state">State</label>
+			<input name="state" type="text" id="state" placeholder="state">
+			<button id=weather_button>Submit!</button>
+		</form>
+	</div>
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  	<script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
+
+</body>
+</html>
