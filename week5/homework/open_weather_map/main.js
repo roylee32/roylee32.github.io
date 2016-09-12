@@ -71,9 +71,9 @@ $(document).ready(function () {
   	$('#weather-wanted')
 	  	.empty()
 	  	.append('<p>City: ' + response.name + '</p>')
-	  	.append('<p>Temperature: ' + temp + '</p>')
-	  	.append('<p>Humidity: ' + response.main.humidity + '</p>')
-	  	.append('<p>Wind Speed: ' + response.wind.speed + '</p>')
+	  	.append('<p>Temperature: ' + temp + '&#8457</p>')
+	  	.append('<p>Humidity: ' + response.main.humidity + '%</p>')
+	  	.append('<p>Wind Speed: ' + response.wind.speed + ' mph</p>')
   }
   function colorBackground (temp){
   	if (temp > 75) {

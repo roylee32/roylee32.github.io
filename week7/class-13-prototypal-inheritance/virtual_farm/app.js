@@ -48,8 +48,8 @@ $(document).ready(function () {
 		this.sound = sound;
 	}
 	FarmAnimal.prototype.talk = function(){
-		alert(name);
-		alert(sound);
+		alert(this.name);
+		alert(this.sound);
 	}
 
 	function Cow (name, image, sound){
@@ -71,11 +71,18 @@ $(document).ready(function () {
 	var Wilbur = new Pig("Wilbur", "http://www.wingclips.com/system/movie-clips/charlottes-web/promise-for-wilbur/images/charlottes-web-movie-clip-screenshot-promise-for-wilbur_large.jpg", "Oinkk")
 	var Chance = new Lamb("Chance", "http://static.independent.co.uk/s3fs-public/styles/article_large/public/thumbnails/image/2016/02/23/20/web-happy-lamb.jpg", "Maeeeee")
 
-	farmAnimals.push(Albert.name, Wilbur.name, Chance.name);
-	console.log(Albert.talk());
+	farmAnimals.push(Albert, Wilbur, Chance);
+	// console.log(Albert.talk()); 
 
 	$.each(farmAnimals, function(i, element){
-		$('body').append('<div>' + element + '</div>');
+		console.log(element);
+		var randomNumber = Math.floor(Math.random() * 50) + '%';
+		var bottom = randomNumber;
+		var left = randomNumber;
+		//url has to be in the format "url:"url-hyperlink""
+		var animal = $('body').append($('<div>' + element.name + '</div>').css({"background": "url("+element.image+")"
+		, "bottom": bottom, "left": left}).addClass("animal"))
+		$()
 	})
 
 })
